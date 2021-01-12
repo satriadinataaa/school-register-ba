@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('Home');
 Route::get('/success', 'HomeController@success')->name('success');
 Route::resource('home', 'HomeController');
+Auth::routes();
+Route::prefix('admin')
+    ->middleware(['auth','admin'])
+    ->group(function(){
+        Route::get('/',function(){
+            return redirect()->route('dashboard.index');
+        });
+        Route::resource('dashboard','DashboardController');
+
+        //Route::resource('travel-package', 'TravelPackageController') ;
+        //Route::resource('gallery', 'GalleryController') ;
+       // Route::resource('transaction', 'TransactionController') ;
+    });
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
