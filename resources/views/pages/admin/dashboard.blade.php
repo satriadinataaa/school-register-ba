@@ -38,6 +38,7 @@
                                 <td>{{ $item->father_name }}</td>
                                 <td>
                                     <a href="{{ route('dashboard.show',$item->id) }}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('cetak_pdf', ['id' => $item->id ]) }}" class="btn btn-primary"><i class="fa fa-print"></i></a>
                                     <form action="{{ route('dashboard.destroy', $item->id ) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('delete')

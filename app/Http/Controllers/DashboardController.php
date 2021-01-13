@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Student;
-
+use PDF;
 class DashboardController extends Controller
 {
     public function index(){
@@ -30,5 +30,13 @@ class DashboardController extends Controller
         return view('pages.admin.index',[
             'student' => $student,
         ]);
+    }
+
+    public function cetak_pdf($id){
+
+        $student = Student::findOrFail($id);
+
+        $pdf = PDF::loadview('pages.admin.pdf',['student'=>$student]);
+        return $pdf->download('laporan-pegawai-pdf.pdf');
     }
 }

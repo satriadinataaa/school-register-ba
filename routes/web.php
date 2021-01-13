@@ -24,7 +24,7 @@ Route::prefix('admin')
             return redirect()->route('dashboard.index');
         });
         Route::resource('dashboard','DashboardController');
-
+        Route::get('pdf/{id}','DashboardController@cetak_pdf')->name('cetak_pdf');
         //Route::resource('travel-package', 'TravelPackageController') ;
         //Route::resource('gallery', 'GalleryController') ;
        // Route::resource('transaction', 'TransactionController') ;
