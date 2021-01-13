@@ -37,7 +37,7 @@
                                 <td>{{ $item->created_at }}</td>
                                 <td>{{ $item->father_name }}</td>
                                 <td>
-                                    <a href="" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                                    <a href="{{ route('dashboard.show',$item->id) }}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
                                     <form action="{{ route('dashboard.destroy', $item->id ) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('delete')

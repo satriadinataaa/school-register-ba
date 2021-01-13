@@ -23,4 +23,12 @@ class DashboardController extends Controller
 
         return redirect()->route('dashboard.index');
     }
+
+    public function show($id){
+
+        $student = Student::findOrFail($id);
+        return view('pages.admin.index',[
+            'student' => $student,
+        ]);
+    }
 }

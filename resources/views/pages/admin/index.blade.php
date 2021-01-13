@@ -53,7 +53,7 @@
                        Nama Lengkap Calon Siswa
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                        <input type="text" class="form-control" name="name" value="{{ $student->name }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -64,7 +64,7 @@
                        Jenis Kelamin
                     </th>
                     <td >
-                        <select class="form-control" name="gender" value="{{ old('gender') }}">
+                        <select class="form-control" name="gender" value="{{ $student->gender }}" disabled>
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>
@@ -79,7 +79,7 @@
                        NIK
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="nik" value="{{ old('nik') }}">
+                        <input type="text" class="form-control" name="nik" value="{{ $student->nik }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -92,10 +92,10 @@
                     <td >
                     <div class="form-group row">
                         <div class="col-md-4">
-                            <input type="text" class="form-control" name="birth_place" value="{{ old('birth_place') }}">
+                            <input type="text" class="form-control" name="birth_place" value="{{ $student->birth_place }}" disabled>
                         </div>
                         <div class="col-md-8">
-                            <input type="date" class="form-control" name="birth_date" value="{{ old('birth_date') }}">
+                            <input type="date" class="form-control" name="birth_date" value="{{ $student->birth_date }}" disabled>
                         </div>
                     </div> 
                     </td>
@@ -108,7 +108,7 @@
                        Asal Sekolah
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="school_origin" value="{{ old('school_origin') }}">
+                        <input type="text" class="form-control" name="school_origin" value="{{ $student->school_origin }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -119,7 +119,7 @@
                        Agama / Kepercayaan
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="religion" value="{{ old('religion') }}">
+                        <input type="text" class="form-control" name="religion" value="{{ $student->religion }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -130,7 +130,8 @@
                        Tinggal Bersama
                     </th>
                     <td >
-                        <select class="form-control" name="live_with" value="{{ old('live_with') }}">
+                        <select class="form-control" name="live_with" disabled>
+                            <option value="{{ $student->live_with }}">{{ $student->live_with }}</option>
                             <option value="Orang Tua">Orang Tua</option>
                             <option value="Wali">Wali</option>
                             <option value="Pondok">Pondok</option>
@@ -146,7 +147,7 @@
                        Telepon yang dapat dihubungi
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
+                        <input type="text" class="form-control" name="phone" value="{{ $student->phone }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -157,7 +158,7 @@
                        Jumlah Saudara
                     </th>
                     <td >
-                        <input type="number" class="form-control" name="sibling" value="{{ old('sibling') }}">
+                        <input type="number" class="form-control" name="sibling" value="{{ $student->sibling }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -168,7 +169,7 @@
                        Tinggi Badan
                     </th>
                     <td >
-                        <input type="number" class="form-control" name="height" value="{{ old('height') }}">
+                        <input type="number" class="form-control" name="height" value="{{ $student->height }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -179,7 +180,7 @@
                        Berat Badan
                     </th>
                     <td >
-                        <input type="number" class="form-control" name="weight" value="{{ old('weight') }}">
+                        <input type="number" class="form-control" name="weight" value="{{ $student->weight }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -190,7 +191,7 @@
                       Hobi
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="hobby" value="{{ old('hobby') }}">
+                        <input type="text" class="form-control" name="hobby" value="{{ $student->hobby }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -201,7 +202,7 @@
                        Cita-cita
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="ambition" value="{{ old('ambition') }}">
+                        <input type="text" class="form-control" name="ambition" value="{{ $student->ambition }}" disabled>
                     </td>
                 </tr>
                 <tr>
@@ -212,8 +213,8 @@
                        Prestasi
                     </th>
                     <td >
-                        <input type="text" class="form-control" name="achievment1" value="{{ old('achievment1') }}">
-                        <input type="text" class="form-control mt-2" name="achievment2" value="{{ old('achievment2') }}">
+                        <input type="text" class="form-control" name="achievment1" value="{{ $student->achievment1 }}" disabled>
+                        <input type="text" class="form-control mt-2" name="achievment2" value="{{ $student->achievment2 }}" disabled>
                     </td>
                 </tr>
                 </div>
@@ -232,7 +233,7 @@
                            Nama Ayah
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="father_name" value="{{ old('father_name') }}">
+                            <input type="text" class="form-control" name="father_name" value="{{ $student->father_name }}" disabled>
                         </td>
                     </tr>
                    
@@ -246,10 +247,10 @@
                         <td >
                         <div class="form-group row">
                             <div class="col-md-4">
-                                <input type="text" class="form-control" name="father_birth_place" value="{{ old('father_birth_place') }}">
+                                <input type="text" class="form-control" name="father_birth_place" value="{{ $student->father_birth_place }}" disabled>
                             </div>
                             <div class="col-md-8">
-                                <input type="date" class="form-control" name="father_birth_date" value="{{ old('father_birth_date') }}">
+                                <input type="date" class="form-control" name="father_birth_date" value="{{ $student->father_birth_date }}" disabled>
                             </div>
                         </div> 
                         </td>
@@ -262,8 +263,8 @@
                            Pendidikan Terkahir
                         </th>
                         <td >
-                            <select class="form-control" name="father_last_education" value="{{ old('father_last_education') }}">
-                                <option value="Tidak Sekolah">Tidak Sekolah</option>
+                            <select class="form-control" name="father_last_education" disabled>
+                                <option  value="{{ $student->father_last_education }}">{{ $student->father_last_education }} </option>
                                 <option value="SD">SD</option>
                                 <option value="SMP">SMP</option>
                                 <option value="SMA">SMA</option>
@@ -280,7 +281,7 @@
                            Pekerjaan
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="father_job" value="{{ old('father_job') }}">
+                            <input type="text" class="form-control" name="father_job" value="{{ $student->father_job }}" disabled>
                         </td>
                     </tr>
                     <tr>
@@ -296,7 +297,7 @@
                                     <input type="text" class="form-control" value="Rp" disabled>
                                 </div>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" name="father_salary" value="{{ old('father_salary') }}">
+                                    <input type="text" class="form-control" name="father_salary" value="{{ $student->father_salary }}" disabled>
                                 </div>
                             </div>   
                         </td>
@@ -309,7 +310,7 @@
                            Alamat Lengkap
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="father_address" value="{{ old('father_address') }}">
+                            <input type="text" class="form-control" name="father_address" value="{{ $student->father_address }}" disabled>
                         </td>
                     </tr>
                     <tr>
@@ -320,7 +321,7 @@
                            Nama Ibu
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="mother_name" value="{{ old('mother_name') }}">
+                            <input type="text" class="form-control" name="mother_name" value="{{ $student->mother_name }}" disabled>
                         </td>
                     </tr>
                    
@@ -334,10 +335,10 @@
                         <td >
                         <div class="form-group row">
                             <div class="col-md-4">
-                                <input type="text" class="form-control" name="mother_birth_place" value="{{ old('mother_birth_place') }}">
+                                <input type="text" class="form-control" name="mother_birth_place" value="{{ $student->mother_birth_place }}" disabled>
                             </div>
                             <div class="col-md-8">
-                                <input type="date" class="form-control" name="mother_birth_date" value="{{ old('mother_birth_date') }}">
+                                <input type="date" class="form-control" name="mother_birth_date" value="{{ $student->mother_birth_date }}" disabled>
                             </div>
                         </div> 
                         </td>
@@ -350,7 +351,8 @@
                            Pendidikan Terkahir
                         </th>
                         <td >
-                            <select class="form-control" name="mother_last_education" value="{{ old('mother_last_education') }}">
+                            <select class="form-control" name="mother_last_education" disabled>
+                                <option value="{{ $student->mother_last_education }}">{{ $student->mother_last_education }}</option>
                                 <option value="Tidak Sekolah">Tidak Sekolah</option>
                                 <option value="SD">SD</option>
                                 <option value="SMP">SMP</option>
@@ -368,7 +370,7 @@
                            Pekerjaan
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="mother_job" value="{{ old('mother_job') }}">
+                            <input type="text" class="form-control" name="mother_job" value="{{ $student->mother_job }}" disabled>
                         </td>
                     </tr>
                     <tr>
@@ -384,7 +386,7 @@
                                     <input type="text" class="form-control" value="Rp" disabled>
                                 </div>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" name="mother_salary" value="{{ old('mother_salary') }}">
+                                    <input type="text" class="form-control" name="mother_salary" value="{{ $student->mother_salary }}" disabled>
                                 </div>
                             </div>   
                         </td>
@@ -402,19 +404,19 @@
                                     <input type="text" class="form-control" value="RT" disabled>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control" name="rt" value="{{ old('rt') }}">
+                                    <input type="text" class="form-control" name="rt" value="{{ $student->rt }}" disabled>
                                 </div>
                                 <div class="col-md-2">
                                     <input type="text" class="form-control" value="RW" disabled>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control" name="rw" value="{{ old('rw') }}">
+                                    <input type="text" class="form-control" name="rw" value="{{ $student->rw }}" disabled>
                                 </div>
                                 <div class="col-md-2">
                                     <input type="text" class="form-control" value="Dusun" disabled>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control" name="dusun" value="{{ old('dusun') }}">
+                                    <input type="text" class="form-control" name="dusun" value="{{ $student->dusun }}" disabled>
                                 </div>
                             </div>   
                             <div class="form-group row">
@@ -422,13 +424,13 @@
                                     <input type="text" class="form-control" value="Desa" disabled>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" name="desa" value="{{ old('desa') }}">   
+                                    <input type="text" class="form-control" name="desa" value="{{ $student->desa }}" disabled>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" value="Kecamatan" disabled>
+                                    <input type="text" class="form-control" value="Kecamatan" disabled >
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" name="kecamatan" value="{{ old('kecamatan') }}">
+                                    <input type="text" class="form-control" name="kecamatan" value="{{ $student->kecamatan }}" disabled>
                                 </div>
                             </div>
                         </td>
@@ -449,7 +451,7 @@
                            Nama Wali
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="wali_name" value="{{ old('wali_name') }}">
+                            <input type="text" class="form-control" name="wali_name" value="{{ $student->wali_name }}" disabled>
                         </td>
                     </tr>
                    
@@ -463,10 +465,10 @@
                         <td >
                         <div class="form-group row">
                             <div class="col-md-4">
-                                <input type="text" class="form-control" name="wali_birth_place" value="{{ old('wali_birth_place') }}">
+                                <input type="text" class="form-control" name="wali_birth_place" value="{{ $student->wali_birth_place }}" disabled>
                             </div>
                             <div class="col-md-8">
-                                <input type="date" class="form-control" name="wali_birth_date" value="{{ old('wali birth_date') }}">
+                                <input type="date" class="form-control" name="wali_birth_date" value="{{ $student->birth_date }}" disabled>
                             </div>
                         </div> 
                         </td>
@@ -479,7 +481,8 @@
                            Pendidikan Terkahir
                         </th>
                         <td >
-                            <select class="form-control" name="wali_last_education" value="{{ old('wali_last_education') }}">
+                            <select class="form-control" name="wali_last_education" disabled> 
+                                <option value="{{ $student->wali_last_education }}">{{ $student->wali_last_education }}</option>
                                 <option value="Tidak Sekolah">Tidak Sekolah</option>
                                 <option value="SD">SD</option>
                                 <option value="SMP">SMP</option>
@@ -497,7 +500,7 @@
                            Pekerjaan
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="wali_job" value="{{ old('wali_job') }}">
+                            <input type="text" class="form-control" name="wali_job" value="{{ $student->wali_job}}" disabled>
                         </td>
                     </tr>
                     <tr>
@@ -508,13 +511,11 @@
                            Alamat
                         </th>
                         <td >
-                            <input type="text" class="form-control" name="wali_address" value="{{ old('wali_address') }}">
+                            <input type="text" class="form-control" name="wali_address" value="{{ $student->wali_address }}" disabled>
                         </td>
                     </tr>
                 </div>
             </table>
-           
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
           </form>
     </div>
     <footer class="section-footer mt-5 mb-4 border-top">
