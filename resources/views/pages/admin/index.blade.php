@@ -64,10 +64,8 @@
                        Jenis Kelamin
                     </th>
                     <td >
-                        <select class="form-control" name="gender" value="{{ $student->gender }}" disabled>
-                            <option value="Laki-Laki">Laki-Laki</option>
-                            <option value="Perempuan">Perempuan</option>
-                        </select>
+                        <input type="text" class="form-control" name="gender" value="{{ $student->gender }}" disabled>
+                           
 
                     </td>
                 </tr>
@@ -130,13 +128,8 @@
                        Tinggal Bersama
                     </th>
                     <td >
-                        <select class="form-control" name="live_with" disabled>
-                            <option value="{{ $student->live_with }}">{{ $student->live_with }}</option>
-                            <option value="Orang Tua">Orang Tua</option>
-                            <option value="Wali">Wali</option>
-                            <option value="Pondok">Pondok</option>
-                            <option value="Panti Asuhan">Panti Asuhan</option>
-                        </select>
+                        <input type="text" class="form-control" name="live_with" disabled value="{{ $student->live_with }}"/>
+                           
                     </td>
                 </tr>
                 <tr>
@@ -260,17 +253,11 @@
                             3.
                         </td>
                         <th width="30%">
-                           Pendidikan Terkahir
+                           Pendidikan Terakhir
                         </th>
                         <td >
-                            <select class="form-control" name="father_last_education" disabled>
-                                <option  value="{{ $student->father_last_education }}">{{ $student->father_last_education }} </option>
-                                <option value="SD">SD</option>
-                                <option value="SMP">SMP</option>
-                                <option value="SMA">SMA</option>
-                                <option value="Diploma">Diploma</option>
-                                <option value="Sarjana">Sarjana</option>
-                            </select>
+                            <input type="text" class="form-control" name="father_last_education" disabled value="{{ $student->father_last_education }}">
+                               
                         </td>
                     </tr>
                     <tr>
@@ -348,18 +335,10 @@
                             9.
                         </td>
                         <th width="30%">
-                           Pendidikan Terkahir
+                           Pendidikan Terakhir
                         </th>
                         <td >
-                            <select class="form-control" name="mother_last_education" disabled>
-                                <option value="{{ $student->mother_last_education }}">{{ $student->mother_last_education }}</option>
-                                <option value="Tidak Sekolah">Tidak Sekolah</option>
-                                <option value="SD">SD</option>
-                                <option value="SMP">SMP</option>
-                                <option value="SMA">SMA</option>
-                                <option value="Diploma">Diploma</option>
-                                <option value="Sarjana">Sarjana</option>
-                            </select>
+                            <input type="text" class="form-control" name="mother_last_education" disabled value="{{ $student->mother_last_education }}"> 
                         </td>
                     </tr>
                     <tr>
@@ -481,15 +460,8 @@
                            Pendidikan Terkahir
                         </th>
                         <td >
-                            <select class="form-control" name="wali_last_education" disabled> 
-                                <option value="{{ $student->wali_last_education }}">{{ $student->wali_last_education }}</option>
-                                <option value="Tidak Sekolah">Tidak Sekolah</option>
-                                <option value="SD">SD</option>
-                                <option value="SMP">SMP</option>
-                                <option value="SMA">SMA</option>
-                                <option value="Diploma">Diploma</option>
-                                <option value="Sarjana">Sarjana</option>
-                            </select>
+                            <input type="text" class="form-control" name="wali_last_education" disabled value="{{ $student->wali_last_education }}"> 
+                             
                         </td>
                     </tr>
                     <tr>
