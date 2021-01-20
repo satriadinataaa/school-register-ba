@@ -9,19 +9,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>Form Pendaftaran</title>
+    <style>
+        td{
+            font-size:12px;
+           padding:5px !important;
+           margin:0 !important;
+        }
+    </style>
   </head>
   <body>
-    <center>
-        <img src="<?= url('logo_yakasaba.png') ?>" height="125">
-        <h3>FORMULIR PENDAFTARAN SISWA BARU</h3>
-        <h3>SMP BUKIT ASAM</h3>
-        <h3>TAHUN PELAJARAN 2020/2021</h3>
-    </center>
+    <table>
+        <tr>
+            <td><img src="<?= url('logo_yakasaba.png') ?>" height="125"></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><center><h4>FORMULIR PENDAFTARAN SISWA BARU</h4>
+                <h4>SMP BUKIT ASAM</h4>
+                <h4>TAHUN PELAJARAN 2020/2021</center></h4></td>
+        </tr>
+        
+        
+    </table>
    
     <div style="margin-top:10px">
        
         
-            <table class="table table-bordered"> 
+            <table class="table table-bordered" cellpadding="0"> 
                 <!-- DATA SISWA -->
                  
                 <tr>
@@ -30,13 +42,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td width="10%">
                         1.
                     </td>
-                    <td width="30%">
+                    <td width="35%">
                        Nama Lengkap Calon Siswa
                     </td>
-                    <td >
+                    <td width="55%" >
                         <?= $student->name ?>
                     </td>
                 </tr>
@@ -44,7 +56,7 @@
                     <td>
                         2.
                     </td>
-                    <td width="30%">
+                    <td >
                        Jenis Kelamin
                     </td>
                     <td >
@@ -421,18 +433,7 @@
             </table>
         
     </div>
-    <footer class="section-footer mt-5 mb-4 border-top">
-       
-        <div class="container-fluid">
-          <div
-            class="row border-top justify-content-center align-items-center pt-4"
-          >
-            <div class="col-auto text-gray-500 font-weight-light">
-              2021 Copyright • CWL • 
-            </div>
-          </div>
-        </div>
-      </footer>
+    
    
     <!-- Optional JavaScript; choose one of the two! -->
 

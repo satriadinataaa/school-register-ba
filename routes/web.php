@@ -30,3 +30,4 @@ Route::prefix('admin')
        // Route::resource('transaction', 'TransactionController') ;
     });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('pdf/{id}','HomeController@cetak_pdf')->name('cetak_pdfs');

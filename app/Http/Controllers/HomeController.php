@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StudentRequest;
 use App\Models\Student;
+use PDF;
 class HomeController extends Controller
 {
     /**
@@ -39,9 +40,21 @@ class HomeController extends Controller
     public function store(StudentRequest $request)
     {
         $data= $request->all();
-        Student::create($data);
-        return redirect()->route('success');
+        $data = Student::create($data);
+        
+        return redirect()->route('success',[
+            'id' => $data->id
+        ]);
     }
+
+    public function cetak_pdf($id){
+
+        $student = Student::findOrFail($id);
+
+        $pdf = PDF::loadview('pages.admin.pdf',['student'=>$student]);
+        return $pdf->download('pendaftaran.pdf');
+    }
+
 
     /**
      * Display the specified resource.

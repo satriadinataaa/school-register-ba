@@ -40,7 +40,8 @@
           <p>
             Kami telah menerima data pendaftaran anda<br>Terima kasih
           </p>
-          <a href="{{ route('Home') }}" class="btn btn-home-page mt-3 px-5">Home Page</a>
+         <!-- <a href="{{ route('Home') }}" class="btn btn-home-page mt-3 px-5">Home Page</a>-->
+          <a href="{{ route('cetak_pdfs',$_GET['id']) }}" class="btn btn-home-page mt-3 px-5">Download Berkas</a>
         </div>
       </div>
     </main>
